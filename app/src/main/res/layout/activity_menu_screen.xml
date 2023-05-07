@@ -58,7 +58,8 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/pneumonia_icon"
+                    android:src="@drawable/pneumonia_icon"
+                    android:background="@color/white"
                     app:shapeAppearance="@style/Circular"
                     android:layout_gravity="center_vertical|left"
                     android:layout_marginStart="22dp"/>
@@ -93,8 +94,8 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/heart_icon"
-                    android:backgroundTint="#F60303"
+
+                    android:src="@drawable/heart_logo"
                     app:shapeAppearance="@style/Circular"
                     android:layout_gravity="center_vertical|left"
                     android:layout_marginStart="22dp"/>
@@ -129,7 +130,8 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/skin_logo"
+                    android:background="@color/white"
+                    android:src="@drawable/skin_logo"
                     app:shapeAppearance="@style/Circular"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="22dp"/>
@@ -164,7 +166,9 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/malaria_logo"
+                    android:background="@color/white"
+
+                    android:src="@drawable/malaria_logo"
                     app:shapeAppearance="@style/Circular"
                     android:layout_gravity="center_vertical|left"
                     android:layout_marginStart="22dp"/>
@@ -176,6 +180,42 @@
                     android:layout_marginStart="100dp"
                     android:fontFamily="@font/inter_medium"
                     android:text="Malaria"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|end"
+                    android:layout_marginEnd="25dp"
+                    android:src="@drawable/baseline_arrow_forward_ios_24"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_breastCancer"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#4150B3"
+                app:cardCornerRadius="20dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+
+                    android:src="@drawable/breast_logo"
+                    app:shapeAppearance="@style/Circular"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginStart="22dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginStart="100dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Breast Cancer"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 

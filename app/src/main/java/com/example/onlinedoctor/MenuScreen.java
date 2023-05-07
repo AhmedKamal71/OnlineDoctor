@@ -3,6 +3,7 @@ package com.example.onlinedoctor;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class MenuScreen extends AppCompatActivity {
             Toast.makeText(this, "heart Screen", Toast.LENGTH_LONG).show();
         });
         skinCancer.setOnClickListener(v -> {
-            Toast.makeText(this, "Skin Cancer Screen", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(MenuScreen.this , SkinDetectionScreen.class));
         });
         pneumonia.setOnClickListener(v -> {
             Toast.makeText(this, "pneumonia Screen", Toast.LENGTH_LONG).show();
