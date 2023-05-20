@@ -24,7 +24,7 @@ public class MenuScreen extends AppCompatActivity {
         breast = findViewById(R.id.cv_breastCancer);
 
         heart.setOnClickListener(v -> {
-            Toast.makeText(this, "heart Screen", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(MenuScreen.this , Heart.class));
         });
         skinCancer.setOnClickListener(v -> {
             startActivity(new Intent(MenuScreen.this , SkinDetectionScreen.class));

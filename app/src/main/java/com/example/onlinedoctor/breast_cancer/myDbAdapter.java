@@ -26,9 +26,10 @@ public class myDbAdapter {
         return id;
     }
 
-    public String getData()
+    public String[] getData()
     {
         SQLiteDatabase db = myhelper.getWritableDatabase();
+        String[] x = new String[7];
         String[] columns = {myDbHelper.UID,myDbHelper.concave_points_mean,myDbHelper.area_mean,
                 myDbHelper.radius_mean,myDbHelper.perimeter_mean,myDbHelper.concavity_mean};
         Cursor cursor =db.query(myDbHelper.TABLE_NAME,columns,null,null,null,null,null);
@@ -41,11 +42,10 @@ public class myDbAdapter {
             String  radius_mean =cursor.getString(cursor.getColumnIndexOrThrow(myDbHelper.radius_mean));
             String  perimeter_mean =cursor.getString(cursor.getColumnIndexOrThrow(myDbHelper.perimeter_mean));
             String  concavity_mean =cursor.getString(cursor.getColumnIndexOrThrow(myDbHelper.concavity_mean));
-
-            buffer.append(cid+ "  cpm  " + concave_points_mean + "  area " + area_mean  +"   radius  " +
-                    radius_mean + "   pm  " +  perimeter_mean  +"   cm  " + concavity_mean);
+            x = new String[]{Integer.toString(cid), concave_points_mean, area_mean, radius_mean, perimeter_mean, concavity_mean};
+//            buffer.append(cid).append("  cpm  ").append(concave_points_mean).append("  area ").append(area_mean).append("   radius  ").append(radius_mean).append("   pm  ").append(perimeter_mean).append("   cm  ").append(concavity_mean).append("\n");
         }
-        return buffer.toString();
+        return x;
     }
 
     static class myDbHelper extends SQLiteOpenHelper

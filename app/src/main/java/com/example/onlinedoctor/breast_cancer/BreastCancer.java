@@ -1,6 +1,7 @@
 package com.example.onlinedoctor.breast_cancer;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.onlinedoctor.History;
 import com.example.onlinedoctor.R;
 
 import org.json.JSONException;
@@ -148,9 +150,10 @@ public class BreastCancer extends AppCompatActivity {
     }
 
     public void viewdata(View view) {
-        String data = helper.getData();
-        Message.message(this, data);
+        startActivity(new Intent(this, History.class));
+
     }
 
 }
 
+//Message.message(this, data);
