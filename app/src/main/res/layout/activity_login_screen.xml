@@ -16,6 +16,7 @@
         android:drawableLeft="@drawable/ic_person_black_24dp"
         android:drawablePadding="8dp"
         android:hint="Email"
+
         android:inputType="textEmailAddress"
         android:padding="8dp"
         android:textColor="@color/black"
